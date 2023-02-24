@@ -16,13 +16,23 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+/**
+    * @fn int main(int argc, char *argv[])
+    * @brief Fonction principale du programme
+    * @param argc Nombre d'arguments
+    * @param argv Tableau des arguments
+*/
 int main(int argc, char *argv[]){
-    // On stocke les valeurs saisi par l'utilisateur dans les variables a et b
+    /** 
+        * On recupere les deux variables a et b entrées par l'utilisateur
+    */
     int a = atoi(argv[1]);
     int b = atoi(argv[2]);
     printf("Les variables sont : %d et %d\n", a, b);
 
-    // On affiche les choix d'opérations possibles à l'utilisateur
+    /**
+        * On affiche le menu de l'application
+    */
     printf("Quelle operation voulez-vous faire ?\n");
     printf("1 - Somme\n");
     printf("2 - Soustraction\n");
@@ -30,12 +40,16 @@ int main(int argc, char *argv[]){
     printf("4 - Division\n");
     printf("5 - Quitter\n");
 
-    // On demande à l'utilisateur son choix
+    /**
+        * On recupere le choix de l'utilisateur
+    */
     int choix = 0;
     printf("Votre choix : ");
     scanf("%d", &choix);
 
-    // En fonction du choix de l’utilisateur, on affiche le résultat de l'opération
+    /**
+        * On effectue l'operation choisie par l'utilisateur
+    */
     switch(choix){
         case 1:
             printf("La somme de %d et %d est : %d\n", a, b, somme(a, b));
